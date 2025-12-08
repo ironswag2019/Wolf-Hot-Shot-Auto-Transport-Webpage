@@ -101,3 +101,45 @@ footer {
         width: 30%;
     }
 }
+/* Slide-in Dropdown Menu */
+.dropdown {
+  position: fixed;
+  top: 0;
+  right: -260px; /* hidden off-screen */
+  width: 260px;
+  height: 100vh;
+  background-color: #050505;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: right 0.35s ease;
+  z-index: 999;
+}
+
+.dropdown a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.dropdown a:hover {
+  color: #b71c1c;
+}
+
+.dropdown.active {
+  right: 0; /* slide into view */
+}
+
+/* Hamburger Animation */
+.menu-icon {
+  cursor: pointer;
+  font-size: 28px;
+  color: white;
+  z-index: 1000;
+}
+
+.menu-icon.active {
+  color: #b71c1c;
+}
