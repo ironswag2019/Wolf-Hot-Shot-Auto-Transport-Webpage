@@ -101,3 +101,74 @@ footer {
         width: 30%;
     }
 }
+/* Header Layout */
+.mobile-header {
+  width: 100%;
+  background: #111;
+  padding: 15px 20px;
+  color: white;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hamburger Button */
+.menu-btn {
+  width: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu-btn span {
+  height: 3px;
+  width: 100%;
+  background: white;
+  display: block;
+  transition: 0.4s;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: #222;
+  padding: 15px;
+  width: 180px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown a {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Hamburger Animation */
+.menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
