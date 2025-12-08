@@ -101,74 +101,45 @@ footer {
         width: 30%;
     }
 }
-/* Header Layout */
-.mobile-header {
-  width: 100%;
-  background: #111;
-  padding: 15px 20px;
-  color: white;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Hamburger Button */
-.menu-btn {
-  width: 30px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.menu-btn span {
-  height: 3px;
-  width: 100%;
-  background: white;
-  display: block;
-  transition: 0.4s;
-}
-
-/* Dropdown Menu */
+/* Slide-in Dropdown Menu */
 .dropdown {
-  position: absolute;
-  top: 70px;
-  right: 20px;
-  background: #222;
-  padding: 15px;
-  width: 180px;
-  border-radius: 10px;
+  position: fixed;
+  top: 0;
+  right: -260px; /* hidden off-screen */
+  width: 260px;
+  height: 100vh;
+  background-color: #050505;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  gap: 20px;
+  transition: right 0.35s ease;
+  z-index: 999;
 }
 
 .dropdown a {
   color: white;
+  font-size: 1.2rem;
   text-decoration: none;
+  font-weight: 600;
+}
+
+.dropdown a:hover {
+  color: #b71c1c;
 }
 
 .dropdown.active {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
+  right: 0; /* slide into view */
 }
 
 /* Hamburger Animation */
-.menu-btn.active span:nth-child(1) {
-  transform: rotate(45deg) translateY(8px);
+.menu-icon {
+  cursor: pointer;
+  font-size: 28px;
+  color: white;
+  z-index: 1000;
 }
-.menu-btn.active span:nth-child(2) {
-  opacity: 0;
-}
-.menu-btn.active span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-8px);
+
+.menu-icon.active {
+  color: #b71c1c;
 }
