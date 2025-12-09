@@ -1,5 +1,5 @@
-const menuIcon = document.getElementById("menuIcon");
-const dropdownMenu = document.getElementById("dropdownMenu");
+const menuIcon = document.getElementById("menu-icon");
+const dropdownMenu = document.getElementById("dropdown");
 
 menuIcon.addEventListener("click", () => {
     menuIcon.classList.toggle("active");      // Change color or state
