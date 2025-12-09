@@ -1,7 +1,7 @@
-const menu-icon = document.getElementById("menu-icon");
+const menuIcon = document.getElementById("menuIcon");
 const dropdownMenu = document.getElementById("dropdownMenu");
 
-menu-icon.addEventListener("click", () => {
-    menu-icon.classList.toggle("active");      // Change color or state
+menuIcon.addEventListener("click", () => {
+    menuIcon.classList.toggle("active");      // Change color or state
     dropdownMenu.classList.toggle("active");  // Slide menu in/out
 });
